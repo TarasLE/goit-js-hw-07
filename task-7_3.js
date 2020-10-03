@@ -17,8 +17,22 @@ const images = [
 ];
 
 const gallery = document.querySelector("#gallery");
-// console.log(gallary);
+console.log(gallery);
 
-// images.forEach({url, alt} => {
+gallery.insertAdjacentHTML(
+  "beforeend",
+  images
+    .map(
+      (el) =>
+        `<li class = "gallery-card"><img  src="${el.url}" alt="${el.alt}"></li>`
+    )
+    .join("")
+);
 
-// });
+console.log(gallery);
+
+// const testAray = images
+//   .map((el) => `<li><img src="${el.url}" alt="${el.alt}"></li>`)
+//   .join();
+
+// console.log(testAray);
